@@ -25,7 +25,6 @@ class Main extends Component {
     loadPlayerInfo = (playerName) => {
         nba.stats.playerInfo({PlayerID: nba.findPlayer(playerName).playerId})
             .then (info => {
-                // console.log(info)
                 const playerInfo = Object.assign(info.commonPlayerInfo[0], info.playerHeadlineStats[0]);
                 console.log(playerInfo);
 
